@@ -7,11 +7,10 @@ import os
 st.set_page_config(page_title="Credit Scoring App", layout="centered")
 
 # 2. Carregar o Modelo
-# Usa caminho relativo para funcionar no GitHub/Render sem erros
+# Usa caminho GitHub
 @st.cache_resource
 def carregar_modelo():
     try:
-        # O PyCaret adiciona o .pkl automaticamente, não precisa colocar a extensão aqui
         return load_model('modelo_credit_scoring_pycaret')
     except Exception as e:
         st.error(f"Erro ao carregar o modelo. Verifique se o arquivo .pkl está na pasta.")
@@ -85,7 +84,7 @@ if st.button('📊 Calcular Risco', use_container_width=True):
         # O modelo faz o pré-processamento automático
         prediction = predict_model(model, data=input_df)
         
-        # Extraindo os resultados (nomes padrão do PyCaret)
+        # Extraindo os resultados
         classe_predita = prediction['prediction_label'].iloc[0]
         score = prediction['prediction_score'].iloc[0]
         
@@ -107,3 +106,4 @@ if st.button('📊 Calcular Risco', use_container_width=True):
     except Exception as e:
         st.error("Ocorreu um erro ao processar a previsão.")
         st.write("Detalhes do erro:", e)
+
