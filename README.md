@@ -2,6 +2,8 @@
 
 Este repositório contém uma solução end-to-end de Ciência de Dados para a concessão de crédito. O objetivo principal foi desenvolver uma ferramenta capaz de auxiliar instituições financeiras a prever a probabilidade de inadimplência de um cliente, classificando-o como "Bom" ou "Mau" pagador.
 
+Acesse através do link - https://credit-scoring-ebac.onrender.com
+
 ## Sobre o Projeto
 
 A análise de crédito é um processo crítico para bancos e fintechs. Errar na aprovação pode significar prejuízo (calote) ou perda de lucro (negar crédito a um bom pagador).
