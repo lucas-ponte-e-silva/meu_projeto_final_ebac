@@ -1,0 +1,10 @@
+# Ignorar arquivos de dados
+*.ftr
+*.csv
+*.xlsx
+
+# Ignorar todos os pickles
+*.pkl
+
+# ! EXCEÇÃO: Não ignorar o modelo oficial do app
+!modelo_credit_scoring_pycaret.pkl
